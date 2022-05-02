@@ -1,0 +1,495 @@
+html,
+body {
+    height: 100%;
+    background-color: rgb(241, 241, 241);
+    font-family: Circular, "Helvetica Nueue";
+}
+.navbar {
+    background-color: #0B4C5F;
+    border-color: #0B4C5F;
+    color: white;
+}
+.navbar-inverse .navbar-brand{
+     color: white;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: white;
+    font-size: 16px;
+}
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.container{
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+a {
+    color:#2f4f4f;
+}
+
+
+
+/* Footer Styles */
+
+.footer {
+    height: 23px;
+    background-color: #0B4C5F;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+
+
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+.hotel_detail{
+ border: 1px solid lightgrey;
+ 
+ padding-top: 10px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;  
+ margin-bottom: 10px;
+ border-radius: 5px;
+ /*background-color: #E6E0F8;*/
+  
+}
+.hotel_detail:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+
+.comment{
+    border: 1px solid lightgrey;
+    background-color: #e6eeff;
+    padding: 5px 5px 5px 5px;
+}
+.review{
+    border: 1px solid lightgrey;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    /*background-color: #F8E0F7*/;
+}
+.review:hover{
+     box-shadow: 7px 7px 5px grey;
+}
+.review_timestamp{
+    color: #6E6E6E;
+}
+.write_review{
+    border: 1px solid lightgrey;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /*background-color: #F5F6CE;*/
+
+}
+.write_review:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+.btn-sm{
+    width: 100px;
+}
+.glyphicon-thumbs-up:hover{
+    background-color: #FA5882;
+
+}
+
+
+#hotel_descrip{
+    /*border: 1px solid lightblue;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 10px;*/
+ }
+
+#other_hotels{
+    border: 1px solid lightgrey;
+    padding: 10px 10px  10px 10px;
+    border-radius: 5px;
+    /*background-color: #CEF6D8;*/
+    /*width: 520px;
+    height: 720px;*/
+}
+#other_hotels:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+#other_hotels_header{
+    float: right
+}
+.hotel_stayed{
+    padding-left: 20px;
+    /*border: 1px solid lightblue;*/
+    /*height: 300px;*/
+}
+#hotel_header{
+    margin-left: 12%;
+}
+.hotel_div{
+    width: 320px;
+    height: 330px;
+    border: 1px solid lightgrey;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    background-color: #D6EAF8;
+    border-radius: 5px;
+}
+.hotel_div:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+
+.top_reviewed_div{
+    /*width:290px;
+    height: 930px;*/
+    border: 1px solid lightgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #D5F5E3;
+    margin-top: 10px;
+    border-radius: 5px;
+
+
+}
+.top_reviewed_div:hover{
+     box-shadow: 7px 7px 5px grey;
+}
+#top_reviewed{
+   text-align: center;
+}
+
+#hotel_subtitle{
+    text-align: left;
+}
+#hotel_subtitle_rate{
+    text-align: right;
+}
+.hotel_image{
+    width: 300px;
+    height:235px;
+    margin-left: 2%;
+
+   /* margin-top: 7%;*/
+}
+.jterm_course{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #D6EAF8;
+    border-radius: 5px;
+
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+
+}
+.semester_course{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #D5F5E3;
+    border-radius: 5px;
+
+}
+.year_course{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #F2D7D5;
+    border-radius: 5px;
+}
+#course_header{
+    text-align: center;
+}
+#jterm_header{
+    text-align: center;
+    /*padding-bottom: 10px;*/
+    padding-top: 4px;
+}
+#semester_header{
+    text-align: center;
+    padding-top: 4px;
+    /*padding-bottom: 10px;*/
+}
+#year_header{
+    text-align: center;
+    padding-top: 4px;
+    /*padding-bottom: 10px;*/
+}
+#course_name{
+    font-size: 15px;
+}
+.year_course:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+.semester_course:hover{
+    box-shadow: 7px 7px 5px grey;
+
+}
+.jterm_course:hover{
+    box-shadow: 7px 7px 5px grey;
+
+}
+.jcourse_name{
+    color: #1A5276;
+}
+.scourse_name{
+    color: #0E6655;
+}
+.ycourse_name{
+    color: #922B21;
+}
+.course_detail{
+    height: 550px;
+    width: 720px;
+    border: 1px solid lightgrey;
+    margin: 10px 10px 10px 10px;
+}
+.course_hotel_use{
+    border: 1px solid lightgrey;
+  /*  width:337px;
+    height: 500px;*/
+    margin: 10px 10px 10px 10px;
+    background-color: #FDEBD0;
+}
+.course_hotel_use:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+#course_title{
+    text-align: center;
+}
+#course_descrip{
+    padding-top: 10px;
+}
+#course_hotel_use_list{
+    color: #B9770E;
+}
+#other_acco{
+    text-align: center;
+}
+img.bg{
+    min-height: 100%;
+    /*min-width: 1024px;*/
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* set up positioning */
+    position: fixed;
+    top: -73px;
+    left: 0;
+}
+
+@media screen and (max-width: 1024px){
+    img.bg{
+        
+       
+    }
+}
+#welcome{
+    margin-top: 220px;
+    /*margin-left: 400px;*/
+    /*margin-top: 20px;*/
+    z-index: 1;
+    position: relative;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Circular,"Helvetica Nueue";
+    padding-bottom: -10px;
+
+}
+#welcome_sub{
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Circular,"Helvetica Nueue";
+    margin-top: -11px;
+    padding-bottom: 10px;
+}
+nav.navbar li.dropdown a.dropdown-toggle{
+    float: right;
+}
+.small, small{
+    font-size: 97%;
+
+}
+.explore{
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    width: 160px;
+    height: 31px;
+    line-height: 30px;
+    border-radius: 5px;
+    border-color: 0px 0px 0px 5px #fff, 5px 3px 12px #000000;
+   /* margin-left: 490px;*/
+    opacity: 0.7;
+    background:rgba(255,255,255,0.5);
+    padding-bottom: 1px;
+    padding-top: 1px;
+    margin: 0px 20px 10px 10px;
+
+
+}
+.explore:hover{
+    background-color: #F7819F;
+    box-shadow: 5px 5px 3px grey;
+
+}
+a.explore_sub{
+    font-size: 19px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.explore_btn{
+    float: center;
+}
+.explore_acc{
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 31px;
+    line-height: 30px;
+    border-radius: 5px;
+    border-color: #F2F2F2;
+    opacity: 0.7;
+
+    background:rgba(255,255,255,0.5);
+    padding-bottom: 1px;
+    padding-top: 1px;
+    margin: 0px 20px 10px 20px;
+}
+div.explore_acc:hover{
+    /*opacity: 0.7;
+    /*background:rgba(255,255,255,0.5);*/
+    background-color: #F7819F;
+    box-shadow: 5px 5px 3px grey;
+    
+}
+#user_header{
+    text-align: center;
+}
+.student{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #D0F5A9;
+    border-radius: 5px;
+    position: relative;
+}
+.student:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+
+#user_stu_header{
+    text-align: center;
+    /*padding-bottom: 10px;*/
+    padding-top: 4px;
+}
+
+
+.professor{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #A9F5D0;
+    border-radius: 5px;
+    position: relative;
+}
+.professor:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+
+#user_prof_header{
+    text-align: center;
+    /*padding-bottom: 10px;*/
+    padding-top: 4px;
+}
+
+.faculty{
+    border: 1px solid lightgrey;
+    width:337px;
+    height: 500px;
+    margin: 10px 10px 10px 10px;
+    background-color: #D0A9F5;
+    border-radius: 5px;
+    position: relative;
+}
+.faculty:hover{
+    box-shadow: 7px 7px 5px grey;
+}
+
+#user_fac_header{
+    text-align: center;
+    /*padding-bottom: 10px;*/
+    padding-top: 4px;
+}
+.stu_name{
+    color: #04B404;
+    font-size: 16px;
+}
+.prof_name{
+    color: #088A68;
+    font-size: 16px;
+}
+.fac_name{
+    color: #380B61;
+    font-size: 16px;
+}
+.user_pag{
+    bottom: 0;
+    position: absolute;
+}
+.user_detail{
+    padding-top: 20px;
+}
+#helpful{
+    text-shadow: 2px 2px 2px #0174DF;
+}
+#likes{
+    background-color:#F6CED8;
+    text-decoration: none;
+    color:black;
+}
+#likes:hover{
+ background-color: #F7819F;   
+}
+.dropdown-menu{
+    background-color: #0B4C5F;
+    border-color: #0B4C5F;
+}
+.dropdown-menu>li>a{
+    color: white;
+}

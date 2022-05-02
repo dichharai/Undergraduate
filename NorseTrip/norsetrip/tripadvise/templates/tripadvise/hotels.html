@@ -1,0 +1,110 @@
+{% extends 'tripadvise/base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="col-sm-12">
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+<h3 id="hotel_header"> {{title}} </h3><br>
+<div class="row">
+
+    <div class="col-sm-8 hotel_outer_div">
+    
+    {% for lodge in lodge %}
+    	
+    		<div class="col-sm-4 hotel_div">
+                
+    			<b>{{ lodge.lodge_name }}</b><br>
+                <p>
+    			{{ lodge.lodge_address}} | {{ lodge.country }}</p>
+                {% if lodge.mean_rating > 0 %}
+                <div class='rating_bar'>
+                    <div  class='rating' style='width:{{lodge.mean_rating}}%;'></div>
+                </div>
+                {% else %}
+				<div class='rating_bar'>
+                    <div  class='rating' style='width:0%;'></div>
+                </div>
+                {% endif %}
+                {% if user.is_anonymous %}
+				<a href="{% url 'hotel_details_notuser' lodge.lodgeId %}"><img class="hotel_image" src="{{lodge.lodge_image.url}}"></a>
+                
+                {% endif %}
+                
+				{%if user and not user.is_anonymous %}	                
+				<a href="{% url 'hotel_details' lodge.lodgeId %}"><img class="hotel_image" src="{{lodge.lodge_image.url}}"></a>
+				{% endif %}
+            
+    		</div>
+    	<!-- </div> -->
+    {% endfor %}
+    </div> 
+
+    <div class="col-sm-4 top_reviewed_div">
+        <h4 id="top_reviewed"> Overview of Accomodations </h4><hr style="border-color:lightgrey">
+        {% for lodge in lodge_list %}
+        {%if user.is_anonymous %}	
+            <span style="margin-left: 10px"><a href="{% url 'hotel_details_notuser' lodge.lodgeId %}" style="text-decoration:none"><b>{{ lodge.lodge_name }}</b></a> <small> 
+            {% if lodge.review_set.count == 1 %}
+            &nbsp{{ lodge.review_set.count }} review
+            {% else %}
+            &nbsp{{ lodge.review_set.count }} reviews 
+            {% endif %}</small>
+            {% endif %}
+        {%if user and not user.is_anonymous %}	
+            <span style="margin-left: 10px"><a href="{% url 'hotel_details' lodge.lodgeId %}" style="text-decoration:none"><b>{{ lodge.lodge_name }} | </b></a> <small> 
+
+            {% if lodge.review_set.count < 1 %}
+            0 review            
+            {% elif lodge.review_set.count == 1 %}
+            &nbsp{{ lodge.review_set.count }} review
+            {% elif lodge.review_set.count > 1 %}
+            &nbsp{{ lodge.review_set.count }} reviews 
+            {% endif %}</small>
+            {% endif %}
+
+            {% if lodge.mean_rating > 0 %}
+                <div class='rating_bar'>
+                    <div  class='rating' style='width:{{lodge.mean_rating}}%;'></div>
+                </div>
+                {% else %}
+                <div class='rating_bar'>
+                    <div  class='rating' style='width:0%;'></div>
+                </div>
+                {% endif %}<br><br></span>
+        {% endfor %}
+
+
+
+    </div>
+   
+   
+
+
+</div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if lodge.has_previous %}
+            <a href="?{{ page_request_var }}={{ lodge.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ lodge.number }} of {{ lodge.paginator.num_pages }}.
+        </span>
+
+        {% if lodge.has_next %}
+            <a href="?{{ page_request_var }}={{ lodge.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Conversion{
+    public static void main(String[] args){
+	double tempC;
+	double tempF;
+	double rectA;
+	double diagonal;
+	double sphereA;
+	double surfaceA;
+        char tempChoice;
+        int temp;
+       
+	Scanner myscan= new Scanner(System.in);
+        System.out.print("Please enter F or C to convert temperature to: ");
+        tempChoice = myscan.next(".").charAt(0);//no methods nextChar(),
+   
+	if (tempChoice == 'C' || tempChoice == 'c'){
+	    System.out.print("Please enter the temperature in Fahrenheit :");
+	    temp = myscan.nextInt();
+	    tempC=(5/9)*(temp-32);
+	    System.out.println("The temperature in Celcius is "+tempC);
+	} 
+	else if (tempChoice =='F' || tempChoice =='f'){
+	    System.out.print("Please enter the temperature in Celcius: ");
+	    temp = myscan.nextInt();
+	    tempF=(9/5)*temp+32;
+	    System.out.println("The temperature in fahrenheit is "+tempF);
+	}
+	else {
+	    System.out.println("You did not put the correct conversion");
+	}
+	
+	
+	
+	
+    }
+}
+        
+	
+       
